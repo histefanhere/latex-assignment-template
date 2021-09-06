@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\input{packages}
+
+\newcommand{\authorname}{Bob Sherman}
+\newcommand{\authorid}{bsher123}
+\newcommand{\templatetitle}{\LaTeX{} Assignment Template}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\templatename}
+\chead{\authorid}
+\rhead{6/09/2021}
+\lfoot{\templatetitle}
+\rfoot{\thepage}
+
+\title{\templatetitle}
+\author{\authorname}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+% \newpage
+
+% SECTIONS
+\IfFileExists{sections/section_1.tex}{\sectionloop}{}
+
+\end{document}

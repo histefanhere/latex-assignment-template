@@ -1,0 +1,41 @@
+\usepackage[english]{babel}
+
+% Images
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% For \begin{figure}[H]
+\usepackage{float}
+
+% Various math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+% \usepackage{gensymb}
+
+% Graphs
+\usepackage{tikz}
+
+% Header
+\usepackage{fancyhdr}
+
+% TODO notes
+\usepackage{todonotes}
+
+% Decreases the margins of the page for more text space
+% \usepackage{fullpage}
+\usepackage[margin=1in,headheight=13.6pt]{geometry}
+
+% For loops
+\usepackage{pgffor}
+
+
+\edef\sectionsmax{15}
+\newcommand{\sectionloop}{\foreach \i in {1,2, 3, ..., \sectionsmax} {
+    \edef\FileName{sections/section_\i.tex}
+    \IfFileExists{\FileName}{
+        \input{\FileName}
+    }{}
+}
+\IfFileExists{sections/section_\sectionsmax.tex} {\errmessage{MAX AMOUNT OF SECTIONS, CHANGE "sectionmax" IN packages.tex}}
+}
