@@ -29,6 +29,16 @@
 % For loops
 \usepackage{pgffor}
 
+% For propper scientific units
+\usepackage{siunitx}
+\sisetup{per-mode=symbol, bracket-unit-denominator=false, sticky-per, inter-unit-product = \ensuremath{{}\cdot{}}}
+
+% Appendix package
+\usepackage[page]{appendix}
+
+% For propper booktabs tables
+% I recommend using https://www.tablesgenerator.com
+\usepackage{booktabs}
 
 \edef\sectionsmax{15}
 \newcommand{\sectionloop}{\foreach \i in {1,2, 3, ..., \sectionsmax} {
