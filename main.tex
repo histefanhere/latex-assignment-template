@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[english]{article}
 \usepackage[utf8]{inputenc}
 
 \input{packages}
@@ -6,18 +6,19 @@
 \newcommand{\authorname}{John Smith}
 \newcommand{\authorid}{jsmi456}
 \newcommand{\templatetitle}{\LaTeX{} Assignment Template}
+\newcommand{\templatedate}{2022-08-23}
 
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{\authorname}
 \chead{\authorid}
-\rhead{6/09/2021}
+\rhead{\DTMsetstyle{ddmmyy} \DTMDate{\templatedate}}
 \lfoot{\templatetitle}
 \rfoot{\thepage}
 
 \title{\templatetitle}
 \author{\authorname}
-\date{\today}
+\date{\DTMDate{\templatedate}}
 
 \begin{document}
 
