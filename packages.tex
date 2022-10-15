@@ -44,6 +44,13 @@
 % I recommend using https://www.tablesgenerator.com
 \usepackage{booktabs}
 
+% Code snippets
+\usepackage{minted}
+\definecolor{bg}{rgb}{0.96,0.96,0.96}
+
+% For including / manipulating PDFs
+\usepackage{pdfpages}
+
 \edef\sectionsmax{15}
 \newcommand{\sectionloop}{\foreach \i in {1,2, 3, ..., \sectionsmax} {
     \edef\FileName{sections/section_\i.tex}
